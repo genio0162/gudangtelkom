@@ -1,0 +1,82 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Tambah User</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="<?= base_url('user'); ?>">Home</a></li>
+                        <li class="breadcrumb-item active"><?= date('D, d M Y H:i'); ?></li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <div class="col-sm-12">
+        <div class="card card-red ">
+            <div class="card-header">
+                <h3 class="card-title">Akun Baru</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="quickForm" method="POST" action="<?= base_url('admin/akunbaru') ?>">
+                <div class="card-body mp-3">
+                    <?= $this->session->flashdata('message'); ?>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Id Admin</label>
+                        <input type="email" name="idadmin" class="form-control" id="Id Admin" placeholder="Masukkan Id" value="<?= set_value('idadmin'); ?>">
+                        <small class="text-danger"><?= form_error('idadmin'); ?></small>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" name="password1" class="form-control" id="password1" placeholder="Masukkan Password">
+                            <small class=" text-danger"><?= form_error('password1'); ?></small>
+                        </div>
+                        <div class="col">
+                            <label for="exampleInputPassword1">Masukkan ulang password</label>
+                            <input type="password" name="password2" class="form-control" id="password2" placeholder="Masukkan Password">
+                            <small class=" text-danger"><?= form_error('password2'); ?></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Nama Admin</label>
+                        <input type="text" name="namaadmin" class="form-control" id="namaadmin" placeholder="Masukkan Nama" value="<?= set_value('namaadmin'); ?>">
+                        <small class=" text-danger"><?= form_error('namaadmin'); ?></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Alamat</label>
+                        <input type="text" name="alamatt" class="form-control" id="alamatt" placeholder="Masukkan Alamat" value="<?= set_value('alamatt'); ?>">
+                        <small class=" text-danger"><?= form_error('alamatt'); ?></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Alamat Email</label>
+                        <input type="email" name="emailbaru" class="form-control" id="emailbaru" placeholder="Masukkan Email" value="<?= set_value('emailbaru'); ?>">
+                        <small class=" text-danger"><?= form_error('emailbaru'); ?></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">No Telpon</label>
+                        <input type="text" name="telpon" class="form-control" id="telpon" placeholder="Masukkan Nomor" value="<?= set_value('telpon'); ?>">
+                        <small class=" text-danger"><?= form_error('telpon'); ?></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Wilayah</label>
+                        <input type="text" name="wilayah" class="form-control" id="wilayah" placeholder="Masukkan Wilayah" value="<?= set_value('wilayah'); ?>">
+                        <small class=" text-danger"><?= form_error('wilayah'); ?></small>
+                    </div><br><br>
+                    <!-- /.card-body -->
+                    <div class="row">
+                        <button type="submit" class="btn btn-block btn-danger">Tambahkan Akun</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.card -->
+</div>
+<!-- /.content-header -->
+
+<!-- /.content -->
